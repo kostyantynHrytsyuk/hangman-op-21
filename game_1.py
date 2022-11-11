@@ -26,7 +26,6 @@ def check_print_words(word):
             new_new_lst=''.join(new_lst)
             print(f'Oops! That letter is not in my word: {new_new_lst}')
         elif if_letter_in_alphabet =='Oops':
-            number_of_attempts-=1
             new_new_lst=''.join(new_lst)
             print(f'Oops! You*ve already guessed that letter: {new_new_lst}')
         else:
