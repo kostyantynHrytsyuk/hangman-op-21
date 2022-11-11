@@ -8,6 +8,10 @@ def check(letter, word, alphabet):
     function should return False.
     >>> check('a', 'heart', 'abcdefghijklmnopqrstuvwxyz')
     True
+    >>> check("z", "alphabet", "abcdefghijklmnopqrstuvwxyz")
+    False
+    >>> check("aaa", "alphabet", "abcdefghijklmnopqrstuvwxyz")
+
     >>> check('7', 'split', 'abcdefghijklmnopqrstuvwxyz')
 
     """
