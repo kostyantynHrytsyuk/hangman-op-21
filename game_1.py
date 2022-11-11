@@ -8,3 +8,4 @@ def check_print_words(word, letter):
         print(f'You have {number_of_attempts} guesses left')
         print(f'Available letters: {all_letters}')
         letter=input('Please guess a letter: ')
+        
