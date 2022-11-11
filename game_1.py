@@ -13,8 +13,8 @@ def check_print_words(word):
         letter=input('Please guess a letter: ')
         if_letter_in_alphabet= check(letter, word, all_letters)
         if if_letter_in_alphabet==True:    
-            word_SP=word.split('')
-            for o,el in word_SP:
+            # word_SP=word.split('')
+            for o,el in enumerate(word):
                 if el==letter:
                     new_str.replace(new_str[o],letter)
             print(f'Good guess: {new_str}')
