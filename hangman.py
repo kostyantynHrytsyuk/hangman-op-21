@@ -6,15 +6,18 @@ def check(letter, word, alphabet):
     chosen that letter and the function should return "Oops". If the given
     letter is in guessed word the function should return True. Else the
     function should return False.
+    >>> check('a', 'heart', 'abcdefghijklmnopqrstuvwxyz')
+    True
     """
+    
     if len(letter) == 1 and isinstance(letter, str):
+        if 97 <= ord(letter) <= 122:
             if letter not in alphabet:
                 return "Oops"
             else:
                 if letter in word:
                     return True
                 return False
-    return None
 
 
 
