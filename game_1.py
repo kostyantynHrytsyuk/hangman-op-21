@@ -35,6 +35,6 @@ def check_print_words(word):
         all_letters=all_letters.replace(letter, '')
         print('------------')
     if change==0:
-        print('Congratulations, you won!')
+        return 'Congratulations, you won!'
     else:
-        print('You lose(')
+        return 'You lose('
