@@ -8,7 +8,6 @@ def check_print_words(word):
     for j in range(len(word)):
         new_str+='_'
     for i in range(len(word)):
-        set_of_letters= set(all_letters)
         print(f'You have {number_of_attempts} guesses left')
         print(f'Available letters: {all_letters}')
         letter=input('Please guess a letter: ')
