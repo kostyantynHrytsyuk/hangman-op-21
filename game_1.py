@@ -34,3 +34,7 @@ def check_print_words(word):
             print(f'Oops! This is not a letter: {new_new_lst}')
         all_letters=all_letters.replace(letter, '')
         print('------------')
+    if change==0:
+        print('Congratulations, you won!')
+    else:
+        print('You lose(')
