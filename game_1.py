@@ -12,9 +12,6 @@ def check_print_words(word):
         print(f'You have {number_of_attempts} guesses left')
         print(f'Available letters: {all_letters}')
         letter=input('Please guess a letter: ')
-<<<<<<< HEAD
-        
-=======
         if_letter_in_alphabet= check(letter, word, all_letters)
         if if_letter_in_alphabet==True:    
             for k in range(len(word)):
@@ -22,23 +19,22 @@ def check_print_words(word):
                     change-=1
                     new_lst.pop(k)
                     new_lst.insert(k, letter)
-            new_new_lst=''.join(new_lst)
-            print(f'Good guess: {new_new_lst}')
+            finnal_lst=''.join(new_lst)
+            print(f'Good guess: {finnal_lst}')
         elif if_letter_in_alphabet==False:
             number_of_attempts-=1
-            new_new_lst=''.join(new_lst)
-            print(f'Oops! That letter is not in my word: {new_new_lst}')
+            finnal_lst=''.join(new_lst)
+            print(f'Oops! That letter is not in my word: {finnal_lst}')
         elif if_letter_in_alphabet =='Oops':
-            new_new_lst=''.join(new_lst)
-            print(f'Oops! You*ve already guessed that letter: {new_new_lst}')
+            finnal_lst=''.join(new_lst)
+            print(f'Oops! You*ve already guessed that letter: {finnal_lst}')
         else:
             number_of_attempts-=1
-            new_new_lst=''.join(new_lst)
-            print(f'Oops! This is not a letter: {new_new_lst}')
+            finnal_lst=''.join(new_lst)
+            print(f'Oops! This is not a letter: {finnal_lst}')
         all_letters=all_letters.replace(letter, '')
         print('------------')
     if change==0:
         return 'Congratulations, you won!'
     else:
         return 'You lose('
->>>>>>> 32cd9a09e751bd9ef20fc8d75fe3184b28314a70
