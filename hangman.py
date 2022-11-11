@@ -1,4 +1,6 @@
+"""Reading file"""
 import random
+import doctest
 
 def load_words(filename:str)->str:
     """
@@ -20,3 +22,6 @@ Welcome to the game, Hangman!
 I am thinking of a word that is {len(massive[result])} letters long.
 """)
     return massive[result]
+
+if __name__=="__main__":
+    doctest.testmod()
