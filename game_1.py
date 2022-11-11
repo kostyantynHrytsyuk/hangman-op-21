@@ -34,4 +34,4 @@ def check_print_words(word):
             new_new_lst=''.join(new_lst)
             print(f'Oops! This is not a letter: {new_new_lst}')
         all_letters=all_letters.replace(letter, '')
-
+        print('------------')
