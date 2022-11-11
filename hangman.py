@@ -8,16 +8,21 @@ def check(letter, word, alphabet):
     function should return False.
     >>> check('a', 'heart', 'abcdefghijklmnopqrstuvwxyz')
     True
+    >>> check('W', 'Wonderland', 'abcdefghijklmnopqrstuvwxyz')
+    True
+    >>> check('m', 'bridge', 'abcdefghijklmnopqrstuvwxyz')
+    False
+    >>> check('e', 'economy', 'abcdijklmnopqrstuvwxyz')
+    'Oops'
     """
     # checking whether it is only one character
     if len(letter) == 1 and isinstance(letter, str):
+        letter = letter.lower()
+        word = word.lower()
         if 97 <= ord(letter) <= 122:
             if letter not in alphabet:
                 return "Oops"
-            else:
-                if letter in word:
-                    return True
-                return False
+            return letter in word
 
 
 
