@@ -15,6 +15,7 @@ def check(letter, word, alphabet):
     >>> check('e', 'economy', 'abcdijklmnopqrstuvwxyz')
     'Oops'
     >>> check(7, 'yellow', 'abcklmnoprsvwxyz')
+    False
     """
     # checking whether it is only one character
     if isinstance(letter, str):
@@ -24,10 +25,4 @@ def check(letter, word, alphabet):
             if 97 <= ord(letter) <= 122 and letter not in alphabet:
                 return "Oops"
             return letter in word
-    return None
-
-
-
-
-
- 
+    return False
