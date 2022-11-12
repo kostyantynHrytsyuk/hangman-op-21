@@ -19,19 +19,19 @@ def check_print_words(word):
                     change-=1
                     new_lst.pop(k)
                     new_lst.insert(k, letter)
-            new_new_lst=''.join(new_lst)
-            print(f'Good guess: {new_new_lst}')
+            finnal_lst=''.join(new_lst)
+            print(f'Good guess: {finnal_lst}')
         elif if_letter_in_alphabet==False:
             number_of_attempts-=1
-            new_new_lst=''.join(new_lst)
-            print(f'Oops! That letter is not in my word: {new_new_lst}')
+            finnal_lst=''.join(new_lst)
+            print(f'Oops! That letter is not in my word: {finnal_lst}')
         elif if_letter_in_alphabet =='Oops':
-            new_new_lst=''.join(new_lst)
-            print(f'Oops! You*ve already guessed that letter: {new_new_lst}')
+            finnal_lst=''.join(new_lst)
+            print(f'Oops! You*ve already guessed that letter: {finnal_lst}')
         else:
             number_of_attempts-=1
-            new_new_lst=''.join(new_lst)
-            print(f'Oops! This is not a letter: {new_new_lst}')
+            finnal_lst=''.join(new_lst)
+            print(f'Oops! This is not a letter: {finnal_lst}')
         all_letters=all_letters.replace(letter, '')
         print('------------')
     if change==0:
