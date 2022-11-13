@@ -25,5 +25,3 @@ def check(letter, word, alphabet):
                 return "Oops"
         return letter.lower() in word.lower()
     return False
-
- 
