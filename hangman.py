@@ -19,12 +19,11 @@ def check(letter, word, alphabet):
     """
     # checking whether it is only one character
     if isinstance(letter, str) and \
-    (65 <= ord(letter) <= 90 or 97 <= ord(letter) <= 122):
-        if len(letter) == 1:
-            letter = letter.lower()
-            word = word.lower()
-            if letter not in alphabet:
+    (65 <= ord(letter) <= 90 or 97 <= ord(letter) <= 122)\
+    and len(letter) == 1:
+        if letter.lower() not in alphabet:
                 return "Oops"
-            return letter in word
+        return letter.lower() in word.lower()
     return False
+
  
