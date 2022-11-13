@@ -13,7 +13,7 @@ def check_print_words(word):
         print(f'Available letters: {all_letters}')
         letter=input('Please guess a letter: ')
         if_letter_in_alphabet= check(letter, word, all_letters)
-        if if_letter_in_alphabet:    
+        if if_letter_in_alphabet==True:
             for k in range(len(word)):
                 if word[k]==letter:
                     change-=1
