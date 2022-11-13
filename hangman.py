@@ -15,6 +15,7 @@ def check(letter, word, alphabet):
     >>> check('e', 'economy', 'abcdijklmnopqrstuvwxyz')
     'Oops'
     >>> check(7, 'yellow', 'abcklmnoprsvwxyz')
+    False
     """
     # checking whether it is only one character
     if isinstance(letter, str) and \
@@ -25,11 +26,31 @@ def check(letter, word, alphabet):
             if letter not in alphabet:
                 return "Oops"
             return letter in word
-    return None
+    return False
 
+"""Reading file"""
+import random
 
-
-
+def load_words(filename:str)->str:
+    """
+    Args:
+        filename(str): path to file
+    returns random word from the file 
+    >>> load_words(9)
+    """
+    if not isinstance(filename, str):
+        return ''
+    with open(filename, 'r', encoding='utf-8') as file:
+        all_words=file.readlines()
+    massive=all_words[0].split(' ')
+    result=random.randint(0, len(massive))
+    print(f"""
+Loading word list from file...
+{len(massive)} words loaded.
+Welcome to the game, Hangman!
+I am thinking of a word that is {len(massive[result])} letters long.
+""")
+    return massive[result]
 
 
  
