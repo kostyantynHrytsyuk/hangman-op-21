@@ -17,14 +17,16 @@ def check(letter, word, alphabet):
     >>> check(7, 'yellow', 'abcklmnoprsvwxyz')
     """
     # checking whether it is only one character
-    if isinstance(letter, str):
+    if isinstance(letter, str) and \
+    (65 <= ord(letter) <= 90 or 97 <= ord(letter) <= 122):
         if len(letter) == 1:
             letter = letter.lower()
             word = word.lower()
-            if 97 <= ord(letter) <= 122 and letter not in alphabet:
+            if letter not in alphabet:
                 return "Oops"
             return letter in word
     return None
+
 
 
 
