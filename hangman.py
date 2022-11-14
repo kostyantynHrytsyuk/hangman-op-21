@@ -75,7 +75,6 @@ def check_print_words(word):
             print(f'Oops! You*ve already guessed that letter: {finnal_lst}')
         #if is not a letter or lenght is more than one
         else:
-            number_of_attempts-=1
             finnal_lst=''.join(new_lst)
             print(f'Oops! This is not a letter: {finnal_lst}')
         all_letters=all_letters.replace(letter, '')
