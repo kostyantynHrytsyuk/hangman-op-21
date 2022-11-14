@@ -85,7 +85,7 @@ def check_print_words(word):
         print('Congratulations, you won!')
     if number_of_attempts==0:
         print(f"""You lose()
-The word was {word}""")
+Sorry, you ran out of guesses. The word was {word}""")
 
 
 def load_words(filename:str)->str:
