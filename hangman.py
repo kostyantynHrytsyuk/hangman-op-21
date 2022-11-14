@@ -109,7 +109,7 @@ I am thinking of a word that is {len(massive[result])} letters long.
 """)
     return massive[result]
 
-def hangman(filename):
+def hangman():
     """The game
 
     Args:
@@ -117,8 +117,8 @@ def hangman(filename):
     Returns:
         The hangman game
     """
-    check_print_words(load_words(filename))
+    check_print_words(load_words("words.txt"))
 
 
 if __name__=="__main__":
-    print(hangman('words.txt'))
+    print(hangman())
