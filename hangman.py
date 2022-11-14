@@ -103,13 +103,22 @@ def load_words(filename:str)->str:
     result=random.randint(0, len(massive))
     print(f"""
 Loading word list from file...
-{len(massive)} words loaded.a
+{len(massive)} words loaded.
 Welcome to the game, Hangman!
 I am thinking of a word that is {len(massive[result])} letters long.
 """)
     return massive[result]
 
+def hangman(filename):
+    """The game
+
+    Args:
+        filename (str): the file that needs to be readed
+    Returns:
+        The hangman game
+    """
+    check_print_words(load_words(filename))
+
 
 if __name__=="__main__":
-    print(check_print_words(load_words("/Users/ulapalijcuk/Documents/GitHub/hangman-op-21/words.txt")))
-
+    print(hangman('words.txt'))
