@@ -28,7 +28,7 @@ def check(letter, word, alphabet):
             return "Oops"
         #chech if letter in word
         return letter.lower() in word.lower()
-    return False
+    return None
 
 
 def check_print_words(word):
@@ -48,6 +48,7 @@ def check_print_words(word):
     for j in range(len(word)):
         new_lst.append('_')
     #cheching condiotion for win or loss
+    #loss combination
     while number_of_attempts>0 and change>0:
         print(f'You have {number_of_attempts} guesses left')
         print(f'Available letters: {all_letters}')
@@ -81,9 +82,9 @@ def check_print_words(word):
         print('------------')
     #win combination
     if change==0:
-        return 'Congratulations, you won!'
-    #loss combination
-    return 'You lose('
+        print('Congratulations, you won!')
+    if number_of_attempts==0:
+        print('You lose(')
 
 
 def load_words(filename:str)->str:
@@ -91,7 +92,7 @@ def load_words(filename:str)->str:
     Reading file
     Args:
         filename(str): path to file
-    returns random word from the file 
+    returns random word from the file
     >>> load_words(9)
     """
     if not isinstance(filename, str):
