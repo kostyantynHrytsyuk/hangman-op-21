@@ -117,8 +117,8 @@ def hangman():
     Returns:
         The hangman game
     """
-    check_print_words(load_words("words.txt"))
+    return check_print_words(load_words("words.txt"))
 
 
 if __name__=="__main__":
-    print(hangman())
+    hangman()
